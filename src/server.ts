@@ -2098,13 +2098,13 @@ app.get("/api/knowledge/search", async (req, res) => {
 /* --------------------------------- Listen ---------------------------------- */
 
 app
-  .listen(PORT, () => {
-    console.log(`[server] up on http://localhost:${PORT}`);
+  .listen(port, () => {
+    console.log(`[server] up on http://localhost:${port}`);
   })
   .on("error", (err: any) => {
     if (err.code === "EADDRINUSE") {
       console.error(
-        `[server] ポート ${PORT} は使用中です。別のPORTを使うか、占有プロセスを終了してください。`
+        `[server] ポート ${port} は使用中です。別のPORTを使うか、占有プロセスを終了してください。`
       );
     } else {
       console.error("[server] listen error:", err);
